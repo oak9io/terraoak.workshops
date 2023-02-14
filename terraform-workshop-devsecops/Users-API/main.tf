@@ -49,3 +49,17 @@ module "dyanmodb" {
     lambda_func_get_user_name = module.Lambda.function_name_get
     lambda_func_set_user_name =  module.Lambda.function_name_set
 }
+      
+resource "aws_dynamodb_table" "root_users_table" {
+  name           = "Users"
+  billing_mode   = "PROVISIONED"
+  hash_key       = "id"
+  read_capacity  = 20 # Must be configured
+  write_capacity = 20 # Must be configured
+
+  attribute {
+    name = "id"
+    type = "N"
+  }
+  
+}
