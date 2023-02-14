@@ -51,7 +51,7 @@ module "dyanmodb" {
 }
       
 resource "aws_dynamodb_table" "root_users_table" {
-  name           = "Users"
+  name           = "UsersRoot"
   billing_mode   = "PROVISIONED"
   hash_key       = "id"
   read_capacity  = 20 # Must be configured
