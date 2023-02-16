@@ -75,7 +75,6 @@ resource "aws_cloudwatch_log_metric_filter" "yada" {
     value     = "1"
   }
 }
-
       
 resource "aws_cloudwatch_log_group" "dada" {
   name = "MyApp/access.log"
